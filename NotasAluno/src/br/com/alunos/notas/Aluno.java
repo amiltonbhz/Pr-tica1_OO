@@ -2,7 +2,7 @@ package br.com.alunos.notas;
 
 public class Aluno {
 	String nome;
-	String matricula;
+	int matricula;
 	int notaAV1;
 	int notaAV2;
 	int notaAE;
@@ -10,7 +10,7 @@ public class Aluno {
 	int periodo;
 
 	// Construtor
-	Aluno(String nomeA, String matA, int notaAV1A, int notaAV2A, int notaAEA, String cursoA, int periodoA) {
+	Aluno(String nomeA, int matA, int notaAV1A, int notaAV2A, int notaAEA, String cursoA, int periodoA) {
 		nome = nomeA;
 		matricula = matA;
 		notaAV1 = notaAV1A;
@@ -35,9 +35,10 @@ public class Aluno {
 
 	public void avaliarAluno() {
 		
-		System.out.println("Aluno:    "+this.nome);
-		System.out.println ("Curso:    "+this.curso);
-		System.out.println ("Período:  "+this.periodo);
+		System.out.println("Aluno:     "+this.nome);
+		System.out.println("Matrícula: "+this.matricula);
+		System.out.println ("Curso:     "+this.curso);
+		System.out.println ("Período:   "+this.periodo);
 		System.out.println("");
 
 		if (this.notaAV1 + this.notaAV2 >= 60) {
@@ -57,9 +58,10 @@ public class Aluno {
 
 	}
 	public void avaliarRecuperacao() {
-		System.out.println("Aluno:    "+this.nome);
-		System.out.println ("Curso:    "+this.curso);
-		System.out.println ("Período:  "+this.periodo);
+		System.out.println("Aluno:     "+this.nome);
+		System.out.println("Matrícula: "+this.matricula);
+		System.out.println ("Curso:     "+this.curso);
+		System.out.println ("Período:   "+this.periodo);
 		System.out.println("");
 
 		System.out.println("Nota AV1:   "+this.notaAV1);
