@@ -5,7 +5,11 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int op=0;
+		int op = 0;
+		float valorNormal = 0;
+		float valorAdicional = 0;
+		String camarote;
+		
 		Scanner sc = new Scanner(System.in);
 		
 		do { 
@@ -22,19 +26,38 @@ public class Main {
 			switch (op) {
 			
 			case 1:
-				Normal ingressoN = new Normal(200);
+				System.out.printf("Digite o valor do ingresso: ");
+				valorNormal = sc.nextFloat();
+				
+				Normal ingressoN = new Normal(valorNormal);
 				ingressoN.imprimeIngresso();
 				System.out.println();
 				break;
 				
 			case 2:
-				VIP vipN = new VIP(200, 200);
+				System.out.printf("Digite o valor BASE do ingresso: ");
+				valorNormal = sc.nextFloat();
+			
+				System.out.printf("Digite o valor ADICIONAL: ");
+				valorAdicional = sc.nextFloat();
+				
+				VIP vipN = new VIP(valorNormal, valorAdicional);
 				vipN.imprimeIngressoVIP();
 				System.out.println();
 				break;
 				
 			case 3:
-				Camarote camaroteN = new Camarote(200, 300, "Camarote 01");
+				System.out.print("Digite o valor BASE do ingresso: ");
+				valorNormal = sc.nextFloat();
+			
+				System.out.print("Digite o valor ADICIONAL: ");
+				valorAdicional = sc.nextInt();
+				
+				System.out.print("Digite o CAMAROTE: ");
+				camarote = sc.next();
+								
+				Camarote camaroteN = new Camarote(valorNormal, valorAdicional, camarote);
+				System.out.println();
 				camaroteN.imprimeCamarote();
 				System.out.println();
 				break;

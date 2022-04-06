@@ -2,14 +2,14 @@ package br.com.carnaval;
 
 public class Camarote extends Ingresso {
 	private float valorAdicional;
-	private String localidade;
+	private String camarote;
 
 	
 	//CONSTRUCTOR
-	public Camarote(float valorIngresso, float valorAdicional, String localidade) {
+	public Camarote(float valorIngresso, float valorAdicional, String camarote) {
 		super(valorIngresso);
 		this.valorAdicional = valorAdicional;
-		this.localidade = localidade;
+		this.camarote = camarote;
 	}
 
 	//GETTERS AND SETTERS
@@ -23,20 +23,20 @@ public class Camarote extends Ingresso {
 	}
 
 
-	public String getLocalidade() {
-		return localidade;
+	public String getCamarote() {
+		return camarote;
 	}
 
 	
-	public void setLocalidade(String localidade) {
-		this.localidade = localidade;
+	public void setCamarote(String localidade) {
+		this.camarote = camarote;
 	}
 	
 	//METHODS
 	public void imprimeCamarote() {
 		System.out.println("Ingresso CAMAROTE:");
 		System.out.printf("Valor do ingresso: %.2f \n", getValorIngresso() + valorAdicional);
-		System.out.println("Localização: "+ getLocalidade());
+		System.out.println("Localização: "+ getCamarote());
 	}
 	
 

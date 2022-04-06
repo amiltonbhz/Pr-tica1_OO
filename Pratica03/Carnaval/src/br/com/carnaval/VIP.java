@@ -7,7 +7,6 @@ public class VIP extends Ingresso {
 	public VIP (float valorIngresso, float valorAdicional) {
 		super (valorIngresso);
 		this.valorAdicional = valorAdicional;
-		
 	}
 	
 	//GETTERS AND SETTERS
@@ -18,7 +17,6 @@ public class VIP extends Ingresso {
 	public void setValorAdicional(float valorAdicional) {
 		this.valorAdicional = valorAdicional;
 	}
-
 	
 	//METHODS
 	public void imprimeIngressoVIP() {
