@@ -1,5 +1,7 @@
 package br.com.veiculo;
 
+import javax.swing.JOptionPane;
+
 public class Onibus extends Veiculo {
 	private int assentos;
 	
@@ -17,6 +19,8 @@ public class Onibus extends Veiculo {
 	}
 	
 	public void exibirDados() {
+		JOptionPane.showMessageDialog(null, "Placa: "+this.getPlaca()+"\nAno: "+this.getAno()+"\nAssentos: "+this.getAssentos(), "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
+
 		
 	}
 

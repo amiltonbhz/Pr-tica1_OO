@@ -1,5 +1,7 @@
 package br.com.veiculo;
 
+import javax.swing.JOptionPane;
+
 public class Caminhao extends Veiculo {
 	private int eixos;
 
@@ -17,6 +19,9 @@ public class Caminhao extends Veiculo {
 	}
 	
 	public void exibirDados() {
+		JOptionPane.showMessageDialog(null, "Placa: "+this.getPlaca()+"\nAno: "+this.getAno(), "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, "Eixos: "+this.getEixos(), "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+
 		
 	}
 
