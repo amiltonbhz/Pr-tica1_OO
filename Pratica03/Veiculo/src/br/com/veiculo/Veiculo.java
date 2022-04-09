@@ -30,9 +30,6 @@ public class Veiculo {
 	public void exibirDados () {	
 		JOptionPane.showMessageDialog(null, "Placa: "+this.getPlaca()+"\nAno: "+this.getAno(), "Dados do Veículo", JOptionPane.INFORMATION_MESSAGE);
 		
-		System.out.println("Dados do veículo:");
-		System.out.println("Placa: "+this.getPlaca());
-		System.out.println("Ano: "+this.getAno());
 	}
 	
 }
