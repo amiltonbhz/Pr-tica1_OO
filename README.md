@@ -1,2 +1,3 @@
-# Pr-tica1_OO
+# Programacao_Orientada_Objetos
+
 Object Oriented Programming - Michelle
