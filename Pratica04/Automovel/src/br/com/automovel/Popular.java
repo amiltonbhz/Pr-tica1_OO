@@ -48,9 +48,6 @@ public class Popular extends Automovel {
         System.out.println("------------------------------");
         System.out.printf("Preço dos acessórios: %.2f\n",valorAgregado);
         System.out.printf("Valor final do automóvel: %.2f",valorFinal);
-
-
-
     }
     
 }
