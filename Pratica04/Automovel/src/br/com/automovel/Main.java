@@ -10,47 +10,48 @@ public class Main {
         boolean abs=false, airbag=false, alarme=false, som=false, conjuntoEletrico=false, computadorBordo=false;
 
        
-        System.out.println("CUSTO FINAL DE AUTOMÓVEL:");
-        System.out.println("------------------------");
+        System.out.println("   CUSTO FINAL DE AUTOMÓVEL:");
+        System.out.println("------------------------------");
 
-        System.out.print("Digite o valor de base: ");
+        System.out.print("Digite o valor BRUTO: ");
         precoBase = sc.nextFloat();        
         
-        System.out.println("ADICIONAR ACESSÓRIOS?  \n   1 - SIM\n   2 - NÃO");
-        System.out.println("-------------------------");
+        System.out.println("------------------------------");
+        System.out.println("\n   ADICIONAR ACESSÓRIO  \n       1 - SIM\n       0 - NÃO");
+        System.out.println("------------------------------");
 
         
-        System.out.printf("ABS: ");
+        System.out.printf("ABS: \t\t\t| ");
         op = sc.nextInt();
         if (op==1){
         	abs = true;
         }
 
-        System.out.printf("AirBag: ");
+        System.out.printf("AirBag: \t\t| ");
         op = sc.nextInt();
         if (op==1){
         	airbag = true;
         }
 
-        System.out.printf("Alarme: ");
+        System.out.printf("Alarme: \t\t| ");
         op = sc.nextInt();
         if (op==1){
         	alarme=true;
         }
 
-        System.out.printf("Som: ");
+        System.out.printf("Som: \t\t\t| ");
         op = sc.nextInt();
         if (op==1){
         	som=true;
 
         }
-        System.out.printf("Conjunto Elétrico: ");
+        System.out.printf("Conjunto Elétrico: \t| ");
         op = sc.nextInt();
         if (op==1){
         	conjuntoEletrico=true;
 
         }
-        System.out.printf("Computador de Bordo: ");
+        System.out.printf("Computador de Bordo: \t| ");
         op = sc.nextInt();
         if (op==1){
         	computadorBordo=true;

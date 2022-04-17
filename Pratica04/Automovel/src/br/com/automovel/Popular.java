@@ -46,8 +46,8 @@ public class Popular extends Automovel {
         float valorFinal = valorAgregado + precoBase;
 
         System.out.println("------------------------------");
-        System.out.printf("Preço dos acessórios: %.2f\n",valorAgregado);
-        System.out.printf("Valor final do automóvel: %.2f",valorFinal);
+        System.out.printf("Acessórios:\t %.2f\n",valorAgregado);
+        System.out.printf("Valor FINAL:\t%.2f",valorFinal);
     }
     
 }
