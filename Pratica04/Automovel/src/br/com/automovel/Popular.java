@@ -2,51 +2,61 @@ package br.com.automovel;
 
 public class Popular extends Automovel {
     float precoBase, valorAgregado;
+    int desconto;
 
     public Popular(boolean abs, boolean airbag, boolean alarme, boolean som, boolean conjuntoEletrico,
-            boolean computadorBordo, float precoBase) {
+            boolean computadorBordo, float precoBase,int desconto) {
         super(abs, airbag, alarme, som, conjuntoEletrico, computadorBordo);
         this.precoBase = precoBase;
+        this.desconto = desconto;
     }
 
-    public float getPreçoBase() {
+    public float getPrecoBase() {
         return precoBase;
     }
 
-    public void setPreçoBase(float precoBase){
+    public void setPre�oBase(float precoBase){
         this.precoBase = precoBase;
+    }
+    
+    public int getDesconto() {
+    	return desconto;
+    }
+    
+    public void setDesconto() {
+    	this.desconto = desconto;
     }
     
     public void calcularPrecoFinal(boolean abs, boolean alarme, boolean som, boolean conjuntoEletrico, boolean computadorBordo, float precoBase){
         
         if (isAbs()==true) {
-            valorAgregado +=getPreçoBase()*.15;
+            valorAgregado +=getPrecoBase()*.15;
             }
         
         if (isAirbag()==true){
-            valorAgregado+=getPreçoBase()*0.10;
+            valorAgregado+=getPrecoBase()*0.10;
             }
         
         if (isAlarme()==true){
-            valorAgregado+=getPreçoBase()*0.03;
+            valorAgregado+=getPrecoBase()*0.03;
             }
         
         if (isSom()==true){
-            valorAgregado+=getPreçoBase()*0.02;
+            valorAgregado+=getPrecoBase()*0.02;
             }
         
         if (isConjuntoEletrico()==true){
-            valorAgregado+=getPreçoBase()*0.05;
+            valorAgregado+=getPrecoBase()*0.05;
             }
         
         if (isComputadorBordo()==true){
-            valorAgregado+=getPreçoBase()*0.10;
+            valorAgregado+=getPrecoBase()*0.10;
             }
 
         float valorFinal = valorAgregado + precoBase;
 
         System.out.println("------------------------------");
-        System.out.printf("Acessórios:\t %.2f\n",valorAgregado);
+        System.out.printf("Acess�rios:\t %.2f\n",valorAgregado);
         System.out.printf("Valor FINAL:\t%.2f",valorFinal);
     }
     
