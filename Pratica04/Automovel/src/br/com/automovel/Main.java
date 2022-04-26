@@ -40,7 +40,7 @@ public class Main {
                 desconto = sc.nextInt();        
                 
                 System.out.println("------------------------------");
-                System.out.println("\n   ADICIONAR ACESSÓRIO  \n       1 - SIM\n       0 - N�O");
+                System.out.println("\n   ADICIONAR ACESSÓRIO  \n       1 - SIM\n       0 - NÃO");
                 System.out.println("------------------------------");
 
                 
@@ -100,7 +100,7 @@ public class Main {
     
 
                 if (reg>contaCarros-1){
-                    System.out.println("INFO: Registro inválido. Tente novamente.\n\n");
+                    System.out.println("INFO: Registro inexistente. Tente novamente.\n\n");
                     break;
                 }else{
                     Vetor_carros[reg].calcularPrecoFinal(abs, alarme, som, conjuntoEletrico, computadorBordo, precoBase, desconto);

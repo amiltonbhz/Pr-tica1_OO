@@ -66,7 +66,7 @@ public class Popular extends Automovel {
         System.out.printf("Desconto: \t %.2f (%d%c)\n", valorDesconto,desconto,caraEsp);
         System.out.println();
         System.out.printf("TOTAL:\t\t %.2f\n",valorFinal);
-        System.out.println("------------------------------");
+        System.out.println("-----------------------------");
         System.out.println();
         System.out.println();
 
