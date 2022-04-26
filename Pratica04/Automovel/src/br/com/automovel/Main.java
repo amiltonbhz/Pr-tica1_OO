@@ -6,9 +6,11 @@ public class Main {
 
         Scanner sc = new Scanner (System.in);
         int op=5;
+        int reg=0;
+       
         
-        float precoBase;
-        int desconto;
+        float precoBase = 0;
+        int desconto=0;
         boolean abs=false, airbag=false, alarme=false, som=false, conjuntoEletrico=false, computadorBordo=false;
         final int MaxCars = 100;
         int contaCarros = 0;
@@ -17,18 +19,18 @@ public class Main {
         Popular [] Vetor_carros = new Popular [MaxCars];
         
         while (op !=3) {
-            System.out.println ("   CONCESSION¡RIA TABAJARA");
+            System.out.println ("   CONCESSION√ÅRIA TABAJARA");
             System.out.println ("-----------------------------");
             System.out.println ("1 - Cadastrar carro");
-            System.out.println ("2 - Calcular preÁo");
+            System.out.println ("2 - Calcular pre√ßo");
             System.out.println ("3 - Sair");
             System.out.println ("-----------------------------");
-            System.out.print("Digite a opÁ„o: ");
+            System.out.print("Digite a op√ß√£o: ");
             
             op = sc.nextInt();
         	switch (op) {
         	case 1:
-                System.out.println("\n\n   CADASTRO DE AUTOM”VEL:");
+                System.out.println("\n\n   CADASTRO DE AUTOM√ìVEL:");
                 System.out.println("------------------------------");
 
                 System.out.print("Digite o valor BRUTO: ");
@@ -38,7 +40,7 @@ public class Main {
                 desconto = sc.nextInt();        
                 
                 System.out.println("------------------------------");
-                System.out.println("\n   ADICIONAR ACESS”RIO  \n       1 - SIM\n       0 - N√O");
+                System.out.println("\n   ADICIONAR ACESS√ìRIO  \n       1 - SIM\n       0 - NÔøΩO");
                 System.out.println("------------------------------");
 
                 
@@ -66,7 +68,7 @@ public class Main {
                 	som=true;
 
                 }
-                System.out.printf("Conjunto ElÈtrico: \t| ");
+                System.out.printf("Conjunto El√©trico: \t| ");
                 op = sc.nextInt();
                 if (op==1){
                 	conjuntoEletrico=true;
@@ -77,27 +79,42 @@ public class Main {
                 if (op==1){
                 	computadorBordo=true;
                 }
-                Vetor_carros[contaCarros] = new Popular(abs, airbag, alarme, som, conjuntoEletrico, computadorBordo, precoBase, desconto);
+                
+                Vetor_carros[contaCarros] = new Popular(abs, airbag, alarme, som, conjuntoEletrico, computadorBordo, precoBase,desconto);
                 contaCarros++;
-                System.out.println("Cadastro realizado com sucesso na posiÁ„o "+contaCarros+"\n\n");
+                System.out.println("\nCadastro realizado. \nREGISTRO: "+contaCarros+"\n\n");
         		break;
-        		
+        
+
         	case 2:
+            System.out.println("\n\n--------- CONSULTA DE PRE√áOS --------------");
+            if (contaCarros==0){
+                System.out.println("INFO: \tN√£o h√° carros registrados. \n\tCadastre um carro.\n\n");
+                break;
+
+            }else{
+                System.out.printf("\nH√° %d carro(s) no sistema.",contaCarros);
+
+               System.out.print("\nDigite o n√∫mero do registro a consultar: ");
+                reg = sc.nextInt()-1;
+    
+
+                if (reg>contaCarros-1){
+                    System.out.println("INFO: Registro inv√°lido. Tente novamente.\n\n");
+                    break;
+                }else{
+                    Vetor_carros[reg].calcularPrecoFinal(abs, alarme, som, conjuntoEletrico, computadorBordo, precoBase, desconto);
+                }
         		break;
+        }
         	
         	case 3:
-        		System.out.println("ExecuÁ„o finalizada.");
+        		System.out.println("Execu√ß√£o finalizada.");
         		break;
         	
-        	default: System.out.println("OpÁ„o Inv·lida. Escolha novamente.");
+        	default: System.out.println("Op√ß√£o Inv√°lida. Escolha novamente.");
         	}
         }
-        
-       
-
-   //     Popular carro1 = new Popular(abs, airbag, alarme, som, conjuntoEletrico, computadorBordo, precoBase);
- //       carro1.calcularPrecoFinal(abs, airbag, alarme, som, conjuntoEletrico, precoBase,desconto);
-
         sc.close();
     }
  }
