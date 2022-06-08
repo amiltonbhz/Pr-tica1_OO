@@ -19,7 +19,7 @@ public class ConexaoPostgre {
 	 private static final String SELECT_ALL_QUERY = "select * from autor";
 	 private static final String SELECT_ALL_BOOKS = "select * from livro";
 	 private static final String SELECT_ALL_CLIENTS = "select * from cliente";
-	 private static final String SELECT_TRANSACTION_BY_NAME = "select * from cliente WHERE nm_cliente = ?";
+	 private static final String SELECT_TRANSACTION_BY_NAME = "select * from cliente WHERE nm_cliente LIKE ?";
 	 private static final String SELECT_TRANSACTION_BY_ID = "select * from pedido where id_cliente = ?";
 
 
@@ -131,11 +131,13 @@ public class ConexaoPostgre {
 	            // Step 2:Create a statement using connection object
 	            PreparedStatement preparedStatement = conn.prepareStatement(SELECT_TRANSACTION_BY_NAME);
 	            // Step 3: Execute the query or update query
-	            preparedStatement.setString(1, nomeCliente);
-				//System.out.println("Nome do Cliente: "+ nomeCliente);
-	            //System.out.println(preparedStatement);
+	            preparedStatement.setString(1,"%"+nomeCliente+"%");
+				System.out.println("Nome do Consultado: "+ nomeCliente);
+				System.out.println();
+	            
 	            ResultSet rs = preparedStatement.executeQuery();
-	            // Step 4: Process the ResultSet object.
+	           
+				// Step 4: Process the ResultSet object.
 
 				int linha = 0;
 				while (rs.next()) {
@@ -150,7 +152,7 @@ public class ConexaoPostgre {
 	     
 	        } catch (SQLException e) {
 	            printSQLException(e);
-	        }
+	        } 
 	    }
 
 		public void getTransactionById(int idCliente) {
@@ -284,7 +286,7 @@ public class ConexaoPostgre {
 	
 				}
 			}
-			
+
 			sc.close();
 	        
 	    }
